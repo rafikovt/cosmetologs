@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+  outline: none !important;
+  font-family: 'Roboto', sans-serif;
+}
+
+html {
+  height: 100%;
+  min-width: 32rem;
+  overflow-x: hidden;
+  text-size-adjust: auto;
+  -webkit-touch-callout: none;
+  touch-action: manipulation;
+  font-size: 10px;
+
+  @media (min-width: 1921px) {
+    font-size: 0.5206vw;
+  }
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  font-size: 1.8rem;
+  font-family: "Roboto", 'sans-serif';
+  color: var(--black);
+  font-weight: 400;
+  line-height: 1.5;
+  position: relative;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+
+  @media (--max1023) {
+    font-size: 1.4rem;
+  }
+}
+
+h1,h2,h3,h4,h5,
+.h1,.h2,.h3,.h4,.h5 {
+  margin-top: 0 !important;
+  margin-bottom: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+}
+
+.container {
+  width: 100%;
+  max-width: 192rem;
+  margin: 0 auto;
+  box-sizing: content-box;
+
+  @media (--max1023) {
+    width: calc(100% - 4rem);
+    padding: 0 2rem;
+  }
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 4.8rem;
+  padding: 1rem 3rem;
+  background-color: $red-light;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.5;
+  white-space: nowrap;
+  border-radius: 5rem;
+  cursor: pointer;
+  border: none;
+  transition: .3s;
+
+  &:hover {
+    background-color: $red;
+  }
+
+  &-transparent {
+    background-color: #fff;
+    border: .1rem solid $red-light;
+
+    &:hover {
+      background-color: $pink-light;
+    }
+  }
+}
+
+.link {
+  text-decoration: none;
+  color: $text;
+  transition: .3s;
+
+  &:hover {
+    color: $red;
+  }
+}
+
+.flex {
+  display: flex;
+}
+
+.title-2 {
+  font-size: 3.8rem;
+}
