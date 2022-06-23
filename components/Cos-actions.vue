@@ -14,7 +14,7 @@
           </div>
           <h3 class="actions-title">Лицо + шея +декольте</h3>
           <p class="actions-description">При первичном обращении в клинику специалист проводит компьютерную диагностику аппаратом Janus</p>
-          <button class="btn">Записатсья</button>
+          <button class="btn" @click.prevent="$emit('open')">Записатсья</button>
         </div>
       </div>
       <div class="actions-item">
@@ -26,7 +26,7 @@
           </div>
           <h3 class="actions-title">Лицо + шея +декольте</h3>
           <p class="actions-description">При первичном обращении в клинику специалист проводит компьютерную диагностику аппаратом Janus</p>
-          <button class="btn">Записатсья</button>
+          <button class="btn" @click.prevent="$emit('open')">Записатсья</button>
         </div>
       </div>
       <div class="actions-item">
@@ -38,7 +38,7 @@
           </div>
           <h3 class="actions-title">Лицо + шея +декольте</h3>
           <p class="actions-description">При первичном обращении в клинику специалист проводит компьютерную диагностику аппаратом Janus</p>
-          <button class="btn">Записатсья</button>
+          <button class="btn" @click.prevent="$emit('open')">Записатсья</button>
         </div>
       </div>
 
@@ -57,12 +57,20 @@ export default {
 .container {
   width: auto;
   padding: 12rem 25rem 0 25rem;
+
+  @media (max-width: 1300px) {
+	padding: 5rem 2rem;
+  }
 }
 
 .actions {
   &-list {
     display: flex;
     align-items: center;
+
+	@media (max-width: 768px) {
+	  flex-direction: column;
+	}
   }
 
   &-item {
@@ -70,8 +78,16 @@ export default {
     text-align: center;
     background: $pink-light;
 
+	@media (max-width: 768px) {
+	  max-width: 100%;
+	}
+
     &:not(:last-child) {
       margin-right: 2.5rem;
+
+	  @media (max-width: 768px) {
+		margin: 0;
+	  }
     }
 
     &-img {

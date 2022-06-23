@@ -6,14 +6,16 @@
         <span>Отдельные зоны</span>
         <svg-icon class="icon" name="arrow-down" />
       </div>
-      <div class="list" :class="{active: isOpen}">
-        <div class="list-item" v-for="feature in list">
-          <div v-text="feature.title" />
-          <div v-text="feature.time" />
-          <div v-text="feature.price" />
-          <button class="btn">Записаться</button>
-        </div>
-      </div>
+		<transition name="fade">
+			<div class="list" :class="{active: isOpen}">
+				<div class="list-item" v-for="feature in list">
+					<div v-text="feature.title" />
+					<div class="time" v-text="feature.time" />
+					<div v-text="feature.price" />
+					<button class="btn" @click.prevent="$emit('open')">Записаться</button>
+				</div>
+			</div>
+		</transition>
     </div>
   </div>
 </template>
@@ -71,6 +73,10 @@ export default {
 .container {
   width: auto;
   padding: 12rem 30rem;
+
+  @media (max-width: 1400px) {
+	padding: 6rem 2rem;
+  }
 }
 
 .features {
@@ -98,6 +104,18 @@ export default {
     justify-content: space-between;
     padding: 4rem 0;
     border-bottom: .1rem solid $grey;
+
+	@media (max-width: 768px) {
+	  display: grid;
+	  grid-template-columns: 1fr 1fr;
+	  grid-gap: 2rem;
+	}
+
+	.time {
+	  @media (max-width: 768px) {
+		justify-self: center;
+	  }
+	}
 
     &:first-child {
       border-top: .1rem solid $grey;

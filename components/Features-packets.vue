@@ -6,28 +6,28 @@
           <p class="packet-description">3 процедуры при первичном обращении в клинику</p>
           <p class="packet-price">5000 ₽</p>
           <p class="packet-price__base">6000 ₽</p>
-          <button class="btn">Записаться</button>
+          <button class="btn" @click.prevent="$emit('open')">Записаться</button>
         </div>
       <div class="packet">
         <h3 class="packet-title">Омоложение лица</h3>
         <p class="packet-description">3 процедуры при первичном обращении в клинику</p>
         <p class="packet-price">5000 ₽</p>
         <p class="packet-price packet-price__base">6000 ₽</p>
-        <button class="btn">Записаться</button>
+        <button class="btn" @click.prevent="$emit('open')">Записаться</button>
       </div>
       <div class="packet">
         <h3 class="packet-title">Омоложение лица</h3>
         <p class="packet-description">3 процедуры при первичном обращении в клинику</p>
         <p class="packet-price">5000 ₽</p>
         <p class="packet-price packet-price__base">6000 ₽</p>
-        <button class="btn">Записаться</button>
+        <button class="btn" @click.prevent="$emit('open')">Записаться</button>
       </div>
       <div class="packet">
         <h3 class="packet-title">Омоложение лица</h3>
         <p class="packet-description">3 процедуры при первичном обращении в клинику</p>
         <p class="packet-price">5000 ₽</p>
         <p class="packet-price packet-price__base">6000 ₽</p>
-        <button class="btn">Записаться</button>
+        <button class="btn" @click.prevent="$emit('open')">Записаться</button>
       </div>
     </div>
     <div class="packets-bottom">
@@ -49,6 +49,15 @@ export default {
     min-height: 41rem;
     padding: 0 25rem;
     background: $red;
+
+	@media (max-width: 1500px) {
+	  padding: 0 2rem;
+	}
+
+	@media (max-width: 1100px) {
+	  flex-direction: column;
+	  background: transparent;
+	}
   }
 
   &-bottom {
@@ -68,6 +77,34 @@ export default {
 
   &:not(:last-child) {
     margin-right: 2.4rem;
+  }
+
+  @media (max-width: 1100px) {
+	max-width: 100%;
+	transform: none;
+	padding: 2.4rem;
+    margin-bottom: 1.6rem;
+	color: #fff;
+
+	&:not(:last-child) {
+	  margin-right: 0;
+	}
+  }
+
+  &:nth-child(even) {
+	@media (max-width: 1100px) {
+	  background: url('../static/img/filter1.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+	}
+  }
+
+  &:nth-child(odd) {
+    @media (max-width: 1100px) {
+      background: url('../static/img/filter2.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
   }
 
   &-title {

@@ -22,17 +22,17 @@ export default {
         {
           icon: 'star',
           title: 'Сертифицированные специалисты',
-          description: 'Процедуру можно проводить в любое время года',
+          description: 'Все специалисты имеют дипломы высшего образования в области косметологии',
         },
         {
           icon: 'time',
-          title: 'Сертифицированные специалисты',
-          description: 'Процедуру можно проводить в любое время года',
+          title: 'Международные медицинаские стандарты',
+          description: 'Благодаря сертифицированным препаратам и оборудованию можно добиться желаемых результатов при минимальном количестве процедур.',
         },
         {
           icon: 'star',
-          title: 'Сертифицированные специалисты',
-          description: 'Процедуру можно проводить в любое время года',
+          title: 'Индивидуальный подход',
+          description: 'Осуществляем подбор индивидуального ухода или курса корректирующих процедур',
         },
         {
           icon: 'calendar',
@@ -57,6 +57,10 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (max-width: 1400px) {
+	padding: 5rem 2rem;
+  }
 }
 
 .title-2 {
@@ -74,6 +78,10 @@ export default {
     margin: 0 auto;
     display: flex;
     align-items: center;
+
+	@media (max-width: 1400px) {
+	  flex-direction: column;
+	}
   }
 
   &-item {
@@ -83,8 +91,16 @@ export default {
     align-items: center;
     text-align: center;
 
+	@media (max-width: 1400px) {
+	  max-width: 100%;
+	}
+
     &:not(:last-child) {
       margin-right: 2.7rem;
+
+	  @media (max-width: 1400px) {
+		margin: 0;
+	  }
     }
   }
 

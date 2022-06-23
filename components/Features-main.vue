@@ -5,7 +5,7 @@
         <h2 class="features-title">Вакуумно-микроигольчаты  RF-лифтинг на аппарате INUS</h2>
         <p class="features-description">Краткое описание процедуры. Диаграммы связей и по сей день остаютс уделом либералов, которые жаждут быть рассмотрены исключительно в разрезе маркетинговых и финансовых предпосылок. </p>
         <div class="features-price">от 20000 ₽</div>
-        <button class="btn-features btn">Записатсья</button>
+        <button class="btn-features btn" @click.prevent="$emit('open')">Записатсья</button>
       </div>
       <div class="features-bottom">
         <div class="features-info">
@@ -73,10 +73,18 @@ export default {
   &-title {
     font-size: 4.8rem;
     margin-bottom: 2.4rem;
+
+	@media (max-width: 768px) {
+	  font-size: 2.4rem;
+	}
   }
 
   &-description {
     margin-bottom: 2rem;
+
+	@media (max-width: 768px) {
+	  font-size: 1.6rem;
+	}
   }
 
   &-price {
@@ -87,6 +95,17 @@ export default {
   &-top {
     padding: 7rem 24rem 8rem 25rem;
     background: $pink-light;
+
+	@media (max-width: 1400px) {
+	  padding: 3.2rem 2rem;
+	}
+
+	@media (max-width: 968px) {
+      background: url('../static/img/filter3.jpg') no-repeat;
+      background-size: cover;
+      backdrop-filter: blur(15px);
+	  color: #fff;
+	}
   }
 
   &-bottom {
@@ -94,14 +113,38 @@ export default {
     display: flex;
     align-items: center;
     background: $pink;
+
+	@media (max-width: 1400px) {
+	  padding: 5rem 2rem;
+	}
+
+	@media (max-width: 768px) {
+	  padding: 2.4rem;
+	  flex-direction: column;
+	  align-items: flex-start;
+	}
   }
 
   &-info {
     display: flex;
     align-items: center;
 
+	@media (max-width: 1400px) {
+	  flex-direction: column;
+	}
+
+	@media (max-width: 768px) {
+	  flex-direction: row;
+	  max-width: 24rem;
+	  margin-bottom: 2.4rem;
+	}
+
     &:not(:last-child) {
       margin-right: 5rem;
+
+	  @media (max-width: 1400px) {
+		margin-right: 2rem;
+	  }
     }
   }
 
@@ -111,12 +154,28 @@ export default {
     margin-right: 2rem;
   }
 
+  &-left {
+	@media (max-width: 1400px) {
+	  width: 50%;
+	}
+
+	@media (max-width: 968px) {
+	  width: 100%;
+	}
+  }
+
   &-banner {
     &-img {
       width: 74rem;
       height: 100%;
       object-fit: cover;
     }
+  }
+}
+
+.features-main-banner {
+  @media (max-width: 968px) {
+    display: none;
   }
 }
 </style>
