@@ -2,15 +2,15 @@
   <div>
     <Header-cos @open="isOpenModal = true"/>
     <Features-main @open="isOpenModal = true"/>
-    <Features-list @open="isOpenModal = true"/>
-    <Features-packets @open="isOpenModal = true"/>
+    <Features-list @open="openModal"/>
+    <Features-packets @open="openModal"/>
     <Cos-actions @open="isOpenModal = true"/>
     <Cos-benefits />
     <AboutProcedure @open="isOpenModal = true"/>
 	<FormQuestions />
 	<Footer-cos />
 	<transition name="fade">
-		<BaseModal v-if="isOpenModal" @close="isOpenModal = false"/>
+		<BaseModal v-if="isOpenModal" @close="close" :modalData="modalData"/>
 	</transition>
 	  <div class="scroll-top__circle" v-if="false">
 		  <svg viewBox="0 0 14 23">
@@ -27,7 +27,18 @@ export default {
 	data() {
 	  return {
 		  isOpenModal: false,
+		  modalData: '',
 	  }
+	},
+	methods: {
+	  openModal(data) {
+		  this.isOpenModal = true;
+		  this.modalData = data;
+	  },
+		close() {
+			this.isOpenModal = false;
+			this.modalData = '';
+		}
 	},
 }
 </script>

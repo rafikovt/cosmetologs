@@ -12,7 +12,7 @@
 					<div v-text="feature.title" />
 					<div class="time" v-text="feature.time" />
 					<div v-text="feature.price" />
-					<button class="btn" @click.prevent="$emit('open')">Записаться</button>
+					<button class="btn" @click.prevent="$emit('open', feature.title)">Записаться</button>
 				</div>
 			</div>
 		</transition>

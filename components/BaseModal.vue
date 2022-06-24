@@ -70,6 +70,13 @@ export default {
 			isPrivacyChecked: false,
 		}
 	},
+	props: {
+		modalData: {
+			type: String,
+			required: false,
+			default: '',
+		}
+	},
 	methods: {
 		async onSubmit() {
 			this.validate();
@@ -126,7 +133,10 @@ export default {
 
 	},
 	mounted() {
-		document.querySelector('html').classList.add('no-scroll')
+		document.querySelector('html').classList.add('no-scroll');
+		if (this.modalData) {
+			this.formData.offer = this.modalData;
+		}
 	},
 	beforeDestroy() {
 		document.querySelector('html').classList.remove('no-scroll')

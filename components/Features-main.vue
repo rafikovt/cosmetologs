@@ -2,10 +2,15 @@
   <div class="container features-banner flex">
     <div class="features-left">
       <div class="features-top">
-        <h2 class="features-title">Вакуумно-микроигольчатый  RF-лифтинг на аппарате INUS</h2>
-        <p class="features-description">Краткое описание процедуры. Диаграммы связей и по сей день остаютс уделом либералов, которые жаждут быть рассмотрены исключительно в разрезе маркетинговых и финансовых предпосылок. </p>
-        <div class="features-price">от 20000 ₽</div>
-        <button class="btn-features btn" @click.prevent="$emit('open')">Записатсья</button>
+        <h1 class="features-title">Косметолог эстетист в Уфе</h1>
+        <p class="features-description">Эстетическая косметология – особый вид косметологии, которая направлена на устранения признаков старения и поддержания молодости без использования хирургических методов. </p>
+        <p class="features-description features-description--full" >К примеру, это может быть лазерная косметология лица.
+
+			Польза эстетической косметологии очевидны: за короткий срок можно без скальпеля подтянуть овал лица, избавиться от морщин, повысить упругость кожи, избавиться от лишних жировых отложений и др. Используются специальное оборудование и профессиональная медицинская косметика.</p>
+
+		  <p class="features-description features-description--full">В качестве лекарственных средств применяются витамины и аминокислоты, гиалуроновая кислота, ферменты, натуральные компоненты, ксеомин. Косметолог в Уфе
+			  предлагает косметические услуги для женщин, девушек, а также для мужчин. </p>
+		  <button class="btn-features btn" @click.prevent="$emit('open')">Записатсья</button>
       </div>
       <div class="features-bottom">
         <div class="features-info">
@@ -57,7 +62,7 @@
       </div>
     </div>
     <div class="features-main-banner">
-      <img class="features-banner-img" src="../static/img/main-banner.jpg" alt="Косметология Уфа">
+      <img class="features-banner-img" src="../static/img/main.webp" alt="Косметология Уфа">
     </div>
   </div>
 </template>
@@ -71,7 +76,7 @@ export default {
 <style lang="scss">
 .features {
   &-title {
-    font-size: 4.8rem;
+    font-size: 3.8rem;
     margin-bottom: 2.4rem;
 
 	@media (max-width: 768px) {
@@ -79,8 +84,20 @@ export default {
 	}
   }
 
+  &-left {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+  }
+
   &-description {
     margin-bottom: 2rem;
+
+	&--full {
+	  @media (max-width: 768px) {
+		display: none;
+	  }
+	}
 
 	@media (max-width: 768px) {
 	  font-size: 1.6rem;
@@ -95,6 +112,7 @@ export default {
   &-top {
     padding: 7rem 24rem 8rem 25rem;
     background: $pink-light;
+	flex-grow: 2;
 
 	@media (max-width: 1400px) {
 	  padding: 3.2rem 2rem;
@@ -166,7 +184,7 @@ export default {
 
   &-banner {
     &-img {
-      width: 74rem;
+      width: 70rem;
       height: 100%;
       object-fit: cover;
     }

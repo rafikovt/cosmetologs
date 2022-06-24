@@ -5,7 +5,7 @@
       <svg-icon class="icon" name="arrow-down" />
     </h2>
     <div class="actions-list">
-      <div class="actions-item">
+      <div class="actions-item wow slideInUp">
         <img class="actions-item-img" src="../static/img/action-1.jpg" alt="Акция на пилинг">
         <div class="actions-item-bottom">
           <div class="actions-price">
@@ -48,12 +48,16 @@
 </template>
 
 <script>
+
+
 export default {
-  name: 'Cos-actions'
+  name: 'Cos-actions',
+
 }
 </script>
 
 <style lang="scss" scoped>
+
 .container {
   width: auto;
   padding: 12rem 25rem 0 25rem;

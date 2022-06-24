@@ -1,34 +1,13 @@
 <template>
   <div class="container" id="price">
     <div class="packets-top">
-      <div class="packet">
-          <h3 class="packet-title">Ультразвуковая чистка</h3>
-          <p class="packet-description">3 процедуры при первичном обращении в клинику</p>
-          <p class="packet-price">1500 ₽</p>
-          <p class="packet-price__base">2000 ₽</p>
-          <button class="btn" @click.prevent="$emit('open')">Записаться</button>
+      <div class="packet" v-for="offer in offers" @click.prevent="$emit('open', offer.title)">
+          <h3 class="packet-title" v-text="offer.title" />
+          <p class="packet-description" v-text="offer.description" />
+          <p class="packet-price" v-text="offer.price" />
+          <p class="packet-price__base" v-text="offer.oldPrice" />
+          <button class="btn">Записаться</button>
         </div>
-      <div class="packet">
-        <h3 class="packet-title">Уход по типу кожу</h3>
-        <p class="packet-description">Уход по типу кожу с использованием косметики Holy Land</p>
-        <p class="packet-price">1300 ₽</p>
-        <p class="packet-price packet-price__base">1800 ₽</p>
-        <button class="btn" @click.prevent="$emit('open')">Записаться</button>
-      </div>
-      <div class="packet">
-        <h3 class="packet-title">Уход по типу кожу</h3>
-        <p class="packet-description">3 процедуры при первичном обращении в клинику</p>
-        <p class="packet-price">1500 ₽</p>
-        <p class="packet-price packet-price__base">2000 ₽</p>
-        <button class="btn" @click.prevent="$emit('open')">Записаться</button>
-      </div>
-      <div class="packet">
-        <h3 class="packet-title">Пилинг BioRePeel</h3>
-        <p class="packet-description">3 процедуры при первичном обращении в клинику</p>
-        <p class="packet-price">2000 ₽</p>
-        <p class="packet-price packet-price__base">2500 ₽</p>
-        <button class="btn" @click.prevent="$emit('open')">Записаться</button>
-      </div>
     </div>
     <div class="packets-bottom">
       <img class="packets-bottom-img" src="../static/img/packets.jpg" alt="Пакеты услуг">
@@ -38,7 +17,37 @@
 
 <script>
 export default {
-  name: 'Features-packets'
+  name: 'Features-packets',
+	data() {
+	  return {
+		  offers: [
+			  {
+				  title: 'Ультразвуковая чистка',
+				  description: '3 процедуры при первичном обращении в клинику',
+				  oldPrice: '2000 ₽',
+				  price: '1500 ₽',
+			  },
+			  {
+				  title: 'Уход по типу кожу',
+				  description: 'Уход по типу кожи с использованием косметики Holy Land',
+				  oldPrice: '1800 ₽',
+				  price: '1300 ₽',
+			  },
+			  {
+				  title: 'Пилинг BioRePeel',
+				  description: 'Уход c использованием косметики Holy Land Holy Land и пилинг BioRePeel',
+				  oldPrice: '2500 ₽',
+				  price: '2000 ₽',
+			  },
+			  {
+				  title: 'Ультразвуковая чистка',
+				  description: '3 процедуры при первичном обращении в клинику',
+				  oldPrice: '2000 ₽',
+				  price: '1500 ₽',
+			  },
+		  ]
+	  }
+	}
 }
 </script>
 
@@ -74,9 +83,21 @@ export default {
   background: #fff;
   text-align: center;
   transform: translateY(200px);
+  transition: .3s ease;
 
   &:not(:last-child) {
     margin-right: 2.4rem;
+  }
+
+  &:hover {
+	  cursor: pointer;
+      transform: translate3d(0,195px,0);
+      box-shadow: 0 2rem 5rem rgb(22 28 45 / 94%), 0 1.5rem 1rem -1.75rem rgb(22 28 45 / 54%) !important;
+
+	@media (max-width: 1100px) {
+	  transform: none;
+	  box-shadow: none;
+	}
   }
 
   @media (max-width: 1100px) {
