@@ -130,6 +130,10 @@ p {
 .no-scroll {
   overflow: hidden;
   margin-right: 17px;
+
+  @media (max-width: 768px) {
+    margin: 0;
+  }
 }
 
 .fade-enter-active, .fade-leave-active {

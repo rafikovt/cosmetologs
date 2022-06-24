@@ -1,32 +1,32 @@
 <template>
-  <div class="container">
+  <div class="container" id="price">
     <div class="packets-top">
       <div class="packet">
-          <h3 class="packet-title">Омоложение лица</h3>
+          <h3 class="packet-title">Ультразвуковая чистка</h3>
           <p class="packet-description">3 процедуры при первичном обращении в клинику</p>
-          <p class="packet-price">5000 ₽</p>
-          <p class="packet-price__base">6000 ₽</p>
+          <p class="packet-price">1500 ₽</p>
+          <p class="packet-price__base">2000 ₽</p>
           <button class="btn" @click.prevent="$emit('open')">Записаться</button>
         </div>
       <div class="packet">
-        <h3 class="packet-title">Омоложение лица</h3>
-        <p class="packet-description">3 процедуры при первичном обращении в клинику</p>
-        <p class="packet-price">5000 ₽</p>
-        <p class="packet-price packet-price__base">6000 ₽</p>
+        <h3 class="packet-title">Уход по типу кожу</h3>
+        <p class="packet-description">Уход по типу кожу с использованием косметики Holy Land</p>
+        <p class="packet-price">1300 ₽</p>
+        <p class="packet-price packet-price__base">1800 ₽</p>
         <button class="btn" @click.prevent="$emit('open')">Записаться</button>
       </div>
       <div class="packet">
-        <h3 class="packet-title">Омоложение лица</h3>
+        <h3 class="packet-title">Уход по типу кожу</h3>
         <p class="packet-description">3 процедуры при первичном обращении в клинику</p>
-        <p class="packet-price">5000 ₽</p>
-        <p class="packet-price packet-price__base">6000 ₽</p>
+        <p class="packet-price">1500 ₽</p>
+        <p class="packet-price packet-price__base">2000 ₽</p>
         <button class="btn" @click.prevent="$emit('open')">Записаться</button>
       </div>
       <div class="packet">
-        <h3 class="packet-title">Омоложение лица</h3>
+        <h3 class="packet-title">Пилинг BioRePeel</h3>
         <p class="packet-description">3 процедуры при первичном обращении в клинику</p>
-        <p class="packet-price">5000 ₽</p>
-        <p class="packet-price packet-price__base">6000 ₽</p>
+        <p class="packet-price">2000 ₽</p>
+        <p class="packet-price packet-price__base">2500 ₽</p>
         <button class="btn" @click.prevent="$emit('open')">Записаться</button>
       </div>
     </div>
@@ -73,7 +73,7 @@ export default {
   padding: 4rem 4.5rem;
   background: #fff;
   text-align: center;
-  transform: translateY(50%);
+  transform: translateY(200px);
 
   &:not(:last-child) {
     margin-right: 2.4rem;

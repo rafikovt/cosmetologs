@@ -1,12 +1,12 @@
 <template>
-  <div class="container">
+  <div class="container" id="actions">
     <h2 class="actions-title toggle">
       <span class="title-2">Акции</span>
       <svg-icon class="icon" name="arrow-down" />
     </h2>
     <div class="actions-list">
       <div class="actions-item">
-        <img class="actions-item-img" src="../static/img/action-1.jpg" alt="Акция">
+        <img class="actions-item-img" src="../static/img/action-1.jpg" alt="Акция на пилинг">
         <div class="actions-item-bottom">
           <div class="actions-price">
             <span class="actions-price__current">4000 ₽</span>
@@ -18,7 +18,7 @@
         </div>
       </div>
       <div class="actions-item">
-        <img class="actions-item-img" src="../static/img/action-2.jpg" alt="Акция">
+        <img class="actions-item-img" src="../static/img/action-2.jpg" alt="Акция в Уфе на услуги косметолога">
         <div class="actions-item-bottom">
           <div class="actions-price">
             <span class="actions-price__current">4000 ₽</span>
@@ -30,7 +30,7 @@
         </div>
       </div>
       <div class="actions-item">
-        <img class="actions-item-img" src="../static/img/action-3.jpg" alt="Акция">
+        <img class="actions-item-img" src="../static/img/action-3.jpg" alt="Акция на чистку лица">
         <div class="actions-item-bottom">
           <div class="actions-price">
             <span class="actions-price__current">4000 ₽</span>

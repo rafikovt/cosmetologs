@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container"  id="features">
     <h2 class="features-title">Услуги</h2>
     <div class="features-list">
       <div class="features-toggle" :class="{opened: isOpen}" @click.prevent="toggle">

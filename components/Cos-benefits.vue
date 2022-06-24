@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container" id="benefits">
     <h2 class="title-2">Наши преимущества</h2>
     <div class="benefits-list">
       <div class="benefits-item" v-for="benefit in benefits">
@@ -77,7 +77,6 @@ export default {
   &-list {
     margin: 0 auto;
     display: flex;
-    align-items: center;
 
 	@media (max-width: 1400px) {
 	  flex-direction: column;

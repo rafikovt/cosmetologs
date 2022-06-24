@@ -2,7 +2,7 @@
   <div class="container features-banner flex">
     <div class="features-left">
       <div class="features-top">
-        <h2 class="features-title">Вакуумно-микроигольчаты  RF-лифтинг на аппарате INUS</h2>
+        <h2 class="features-title">Вакуумно-микроигольчатый  RF-лифтинг на аппарате INUS</h2>
         <p class="features-description">Краткое описание процедуры. Диаграммы связей и по сей день остаютс уделом либералов, которые жаждут быть рассмотрены исключительно в разрезе маркетинговых и финансовых предпосылок. </p>
         <div class="features-price">от 20000 ₽</div>
         <button class="btn-features btn" @click.prevent="$emit('open')">Записатсья</button>
@@ -57,7 +57,7 @@
       </div>
     </div>
     <div class="features-main-banner">
-      <img class="features-banner-img" src="../static/img/main-banner.jpg" alt="баннер">
+      <img class="features-banner-img" src="../static/img/main-banner.jpg" alt="Косметология Уфа">
     </div>
   </div>
 </template>
